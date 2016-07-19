@@ -1,0 +1,9 @@
+available_diags.000000
+CPU_stats
+logfile.000000.out
+MOM_parameter_doc.all
+MOM_parameter_doc.layout
+MOM_parameter_doc.short
+ocean.stats
+time_stamp.out
+*.nc
