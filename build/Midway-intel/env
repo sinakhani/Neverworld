@@ -1,0 +1,3 @@
+module unload intel intelmpi
+module load netcdf-fortran
+module load intelmpi/5.0+intel-15.0

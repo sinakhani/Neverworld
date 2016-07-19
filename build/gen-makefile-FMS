@@ -1,0 +1,4 @@
+mkdir -p Midway-intel/shared/repro/
+(cd  Midway-intel/shared/repro/; rm -f path_names; \
+../../../../src/mkmf/bin/list_paths ../../../../src/FMS; \
+../../../../src/mkmf/bin/mkmf -t ../../../../src/mkmf.local/Midway-intel.mk  -p libfms.a -c "-Duse_libMPI -Duse_netCDF -DSPMD" path_names)

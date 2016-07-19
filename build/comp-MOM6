@@ -1,0 +1,1 @@
+(cd  Midway-intel/ocean_only/repro/; source ../../env; make NETCDF=3 REPRO=1 MOM6 -j)

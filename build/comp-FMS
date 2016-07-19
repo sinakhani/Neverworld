@@ -1,0 +1,1 @@
+(cd  Midway-intel/shared/repro/; source ../../env; make NETCDF=3 REPRO=1 libfms.a -j)
