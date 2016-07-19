@@ -2,7 +2,7 @@
    the Modular Ocean Model (MOM6), a numerical ocean model developed at NOAA-GFDL.
    Where appropriate, parameters use usually given in MKS units.
 
-   This particular file is for the example in benchmark.
+   This particular file is for the example in Neverland.
 
    This MOM_input file typically contains only the non-default values that are
    needed to reproduce this example.  A full list of parameters for this example
@@ -163,7 +163,7 @@ ISOTROPIC = True                !   [Boolean] default = False
                                 ! direction are _not_ independent. In MOM the meridional
                                 ! extent is determined to fit the zonal extent and the
                                 ! number of grid points, while grid is perfectly isotropic.
-TOPO_CONFIG = "benchmark"       !
+TOPO_CONFIG = "Neverland"       !
                                 ! This specifies how bathymetry is specified:
                                 !     file - read bathymetric information from the file
                                 !       specified by (TOPO_FILE).
@@ -187,7 +187,7 @@ MINIMUM_DEPTH = 1.0             !   [m] default = 0.0
                                 ! The minimum depth of the ocean.
 MAXIMUM_DEPTH = 5500.0          !   [m]
                                 ! The maximum depth of the ocean.
-THICKNESS_CONFIG = "benchmark"  !
+THICKNESS_CONFIG = "Neverland"  !
                                 ! A string that determines how the initial layer
                                 ! thicknesses are specified for a new run:
                                 !     file - read interface heights from the file specified
@@ -206,7 +206,7 @@ THICKNESS_CONFIG = "benchmark"  !
                                 !     sloshing - TBD AJA.
                                 !     seamount - TBD AJA.
                                 !     USER - call a user modified routine.
-TS_CONFIG = "benchmark"         !
+TS_CONFIG = "Neverland"         !
                                 ! A string that determines how the initial tempertures
                                 ! and salinities are specified for a new run:
                                 !     file - read velocities from the file specified
