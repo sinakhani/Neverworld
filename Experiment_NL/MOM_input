@@ -33,11 +33,11 @@ NJHALO = 4                      ! default = 2
                                 ! y-direction.  With STATIC_MEMORY_ this is set as NJHALO_
                                 ! in MOM_memory.h at compile time; without STATIC_MEMORY_
                                 ! the default is NJHALO_ in MOM_memory.h (if defined) or 2.
-NIGLOBAL = 360                  !
+NIGLOBAL = 90                   !
                                 ! The total number of thickness grid points in the
                                 ! x-direction in the physical domain. With STATIC_MEMORY_
                                 ! this is set in MOM_memory.h at compile time.
-NJGLOBAL = 180                  !
+NJGLOBAL = 72                    !
                                 ! The total number of thickness grid points in the
                                 ! y-direction in the physical domain. With STATIC_MEMORY_
                                 ! this is set in MOM_memory.h at compile time.
@@ -149,9 +149,9 @@ GRID_CONFIG = "mercator"        !
                                 !     cartesian - use a (flat) Cartesian grid.
                                 !     spherical - use a simple spherical grid.
                                 !     mercator - use a Mercator spherical grid.
-SOUTHLAT = -41.0                !   [degrees]
+SOUTHLAT = -65.0                !   [degrees]
                                 ! The southern latitude of the domain.
-LENLAT = 41.0                   !   [degrees]
+LENLAT = 50.833129262744606     !   [degrees]
                                 ! The latitudinal length of the domain.
 LENLON = 90.0                   !   [degrees]
                                 ! The longitudinal length of the domain.
@@ -163,6 +163,15 @@ ISOTROPIC = True                !   [Boolean] default = False
                                 ! direction are _not_ independent. In MOM the meridional
                                 ! extent is determined to fit the zonal extent and the
                                 ! number of grid points, while grid is perfectly isotropic.
+EQUATOR_REFERENCE = False       !   [Boolean] default = True
+                                ! If true, the grid is defined to have the equator at the
+                                ! nearest q- or h- grid point to (-LOWLAT*NJGLOBAL/LENLAT).
+LAT_ENHANCE_FACTOR = 1.0        !   [nondim] default = 1.0
+                                ! The amount by which the meridional resolution is
+                                ! enhanced within LAT_EQ_ENHANCE of the equator.
+LAT_EQ_ENHANCE = 0.0            !   [degrees] default = 0.0
+                                ! The latitude range to the north and south of the equator
+                                ! over which the resolution is enhanced.
 TOPO_CONFIG = "Neverland"       !
                                 ! This specifies how bathymetry is specified:
                                 !     file - read bathymetric information from the file
