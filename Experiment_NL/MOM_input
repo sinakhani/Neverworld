@@ -102,8 +102,6 @@ C_P = 3925.0                    !   [J kg-1 K-1] default = 3991.86795711963
 SAVE_INITIAL_CONDS = True       !   [Boolean] default = False
                                 ! If true, write the initial conditions to a file given
                                 ! by IC_OUTPUT_FILE.
-IC_OUTPUT_FILE = "GOLD_IC"      ! default = "MOM_IC"
-                                ! The file into which to write the initial conditions.
 
 ! === module MOM_tracer_registry ===
 
@@ -510,18 +508,10 @@ BUOY_CONFIG = "linear"          !
                                 ! The character string that indicates how buoyancy forcing
                                 ! is specified. Valid options include (file), (zero),
                                 ! (linear), (USER), and (NONE).
-WIND_CONFIG = "gyres"           !
+WIND_CONFIG = "Neverland"           !
                                 ! The character string that indicates how wind forcing
                                 ! is specified. Valid options include (file), (2gyre),
                                 ! (1gyre), (gyres), (zero), and (USER).
-TAUX_SIN_AMP = 0.1              !   [Pa] default = 0.0
-                                ! With the gyres wind_config, the sine amplitude in the
-                                ! zonal wind stress profile:
-                                !   B in taux = A + B*sin(n*pi*y/L) + C*cos(n*pi*y/L).
-TAUX_N_PIS = 1.0                !   [nondim] default = 0.0
-                                ! With the gyres wind_config, the number of gyres in
-                                ! the zonal wind stress profile:
-                                !   n in taux = A + B*sin(n*pi*y/L) + C*cos(n*pi*y/L).
 RESTOREBUOY = True              !   [Boolean] default = False
                                 ! If true, the buoyancy fluxes drive the model back
                                 ! toward some specified surface state with a rate

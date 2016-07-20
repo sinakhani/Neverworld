@@ -1,54 +1,26 @@
-"MOM benchmark Experiment"
+"Neverland Experiment"
 1 1 1 0 0 0
-"prog",      1,"days",1,"days","time",
-#"ave_prog", 5,"days",1,"days","Time",365,"days"
-#"cont",     5,"days",1,"days","Time",365,"days"
+"snapshots",      1,"days",1,"days","time",
+"daily_averages", 1,"days",1,"days","time",
+"forcing",        1,"days",1,"days","time",
 
 #This is the field section of the diag_table.
 
 # Prognostic Ocean fields:
 #=========================
 
-"ocean_model","u","u","prog","all",.false.,"none",2
-"ocean_model","v","v","prog","all",.false.,"none",2
-"ocean_model","h","h","prog","all",.false.,"none",1
-"ocean_model","e","e","prog","all",.false.,"none",2
-"ocean_model","temp","temp","prog","all",.false.,"none",2
-#"ocean_model","salt","salt","prog","all",.false.,"none",2
+"ocean_model","u","u","snapshots","all","none","none",2
+"ocean_model","v","v","snapshots","all","none","none",2
+"ocean_model","h","h","snapshots","all","none","none",2
+"ocean_model","e","e","snapshots","all","none","none",1
 
-#"ocean_model","u","u","ave_prog_%4yr_%3dy","all",.true.,"none",2
-#"ocean_model","v","v","ave_prog_%4yr_%3dy","all",.true.,"none",2
-#"ocean_model","h","h","ave_prog_%4yr_%3dy","all",.true.,"none",1
-#"ocean_model","e","e","ave_prog_%4yr_%3dy","all",.true.,"none",2
+"ocean_model","u","u","daily_averages","all","mean","none",2
+"ocean_model","v","v","daily_averages","all","mean","none",2
+"ocean_model","h","h","daily_averages","all","mean","none",2
+"ocean_model","e","e","daily_averages","all","mean","none",1
 
-# Auxilary Tracers:
-#==================
-#"ocean_model","vintage","vintage","prog_%4yr_%3dy","all",.false.,"none",2
-#"ocean_model","age","age","prog_%4yr_%3dy","all",.false.,"none",2
-
-# Continuity Equation Terms:
-#===========================
-#"ocean_model","dhdt","dhdt","cont_%4yr_%3dy","all",.true.,"none",2
-#"ocean_model","wd","wd","cont_%4yr_%3dy","all",.true.,"none",2
-#"ocean_model","uh","uh","cont_%4yr_%3dy","all",.true.,"none",2
-#"ocean_model","vh","vh","cont_%4yr_%3dy","all",.true.,"none",2
-#"ocean_model","h_rho","h_rho","cont_%4yr_%3dy","all",.true.,"none",2
-#"ocean_model","uh_rho","uh_rho","cont_%4yr_%3dy","all",.true.,"none",2
-#"ocean_model","vh_rho","vh_rho","cont_%4yr_%3dy","all",.true.,"none",2
-#"ocean_model","uhGM_rho","uhGM_rho","cont_%4yr_%3dy","all",.true.,"none",2
-#"ocean_model","vhGM_rho","vhGM_rho","cont_%4yr_%3dy","all",.true.,"none",2
-
-#
-# Tracer Fluxes:
-#==================
-#"ocean_model","T_adx",  "T_adx",  "ave_prog_%4yr_%3dy","all",.true.,"none",2
-#"ocean_model","T_ady",  "T_ady",  "ave_prog_%4yr_%3dy","all",.true.,"none",2
-#"ocean_model","T_diffx","T_diffx","ave_prog_%4yr_%3dy","all",.true.,"none",2
-#"ocean_model","T_diffy","T_diffy","ave_prog_%4yr_%3dy","all",.true.,"none",2
-#"ocean_model","S_adx",  "S_adx",  "ave_prog_%4yr_%3dy","all",.true.,"none",2
-#"ocean_model","S_ady",  "S_ady",  "ave_prog_%4yr_%3dy","all",.true.,"none",2
-#"ocean_model","S_diffx","S_diffx","ave_prog_%4yr_%3dy","all",.true.,"none",2
-#"ocean_model","S_diffy","S_diffy","ave_prog_%4yr_%3dy","all",.true.,"none",2
+"ocean_model","taux","taux","forcing","all","none","none",2
+"ocean_model","tauy","tauy","forcing","all","none","none",2
 
 #=============================================================================================
 #
