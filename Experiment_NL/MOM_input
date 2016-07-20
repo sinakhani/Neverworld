@@ -123,8 +123,13 @@ TOPO_CONFIG = "Neverland"       !
                                 !     USER - call a user modified routine.
 
 ! === module Neverland_initialize_topography ===
+NL_ROUGHNESS_AMP = 0.0          !   [not defined] default = 0.05
+                                ! Amplitude of wavy signal in bathymetry.
 MINIMUM_DEPTH = 1.0             !   [m] default = 0.0
-                                ! The minimum depth of the ocean.
+                                ! If MASKING_DEPTH is unspecified, then anything shallower than
+                                ! MINIMUM_DEPTH is assumed to be land and all fluxes are masked out.
+                                ! If MASKING_DEPTH is specified, then all depths shallower than
+                                ! MINIMUM_DEPTH but deeper than MASKING_DEPTH are rounded to MINIMUM_DEPTH.
 MAXIMUM_DEPTH = 4000.0          !   [m]
                                 ! The maximum depth of the ocean.
 
@@ -154,7 +159,7 @@ COORD_FILE = "coordinate.nc"    !
 ! Parameters providing information about the lateral grid.
 
 ! === module MOM_state_initialization ===
-THICKNESS_CONFIG = "uniform"    !
+THICKNESS_CONFIG = "Neverland"  !
                                 ! A string that determines how the initial layer
                                 ! thicknesses are specified for a new run:
                                 !     file - read interface heights from the file specified
@@ -178,6 +183,8 @@ THICKNESS_CONFIG = "uniform"    !
                                 !     seamount - TBD AJA.
                                 !     rossby_front - a mixed layer front in thermal wind balance.
                                 !     USER - call a user modified routine.
+INIT_THICKNESS_PROFILE = 150.0, 250.0, 600.0, 3*1000.0 !   [m]
+                                ! Profile of initial layer thicknesses.
 
 ! === module MOM_diag_mediator ===
 
@@ -186,7 +193,7 @@ THICKNESS_CONFIG = "uniform"    !
 ! === module MOM_wave_speed ===
 
 ! === module MOM_lateral_mixing_coeffs ===
-RESOLN_SCALED_KH = True         !   [Boolean] default = False
+RESOLN_SCALED_KH = False        !   [Boolean] default = False
                                 ! If true, the Laplacian lateral viscosity is scaled away
                                 ! when the first baroclinic deformation radius is well
                                 ! resolved.
@@ -337,9 +344,9 @@ DTBT = -0.95                    !   [s or nondim] default = -0.98
                                 ! integer fraction of DT, rounding down.
 
 ! === module MOM_thickness_diffuse ===
-KHTH = 1.0                      !   [m2 s-1] default = 0.0
+KHTH = 1000.0                   !   [m2 s-1] default = 0.0
                                 ! The background horizontal thickness diffusivity.
-KHTH_MAX = 900.0                !   [m2 s-1] default = 0.0
+KHTH_MAX = 1000.0               !   [m2 s-1] default = 0.0
                                 ! The maximum horizontal thickness diffusivity.
 
 ! === module MOM_mixed_layer_restrat ===
@@ -420,7 +427,7 @@ DT_FORCING = 3600.0             !   [s] default = 900.0
                                 ! The time step for changing forcing, coupling with other
                                 ! components, or potentially writing certain diagnostics.
                                 ! The default value is given by DT.
-DAYMAX = 1.0                    !   [days]
+DAYMAX = 5000.0                 !   [days]
                                 ! The final time of the whole simulation, in units of
                                 ! TIMEUNIT seconds.  This also sets the potential end
                                 ! time of the present run segment if the end time is
@@ -435,7 +442,7 @@ RESTINT = 365.0                 !   [days] default = 0.0
                                 ! The interval between saves of the restart file in units
                                 ! of TIMEUNIT.  Use 0 (the default) to not save
                                 ! incremental restart files at all.
-ENERGYSAVEDAYS = 0.25           !   [days] default = 0.0416666666666667
+ENERGYSAVEDAYS = 5.0            !   [days] default = 0.0416666666666667
                                 ! The interval in units of TIMEUNIT between saves of the
                                 ! energies of the run and other globally summed diagnostics.
 
