@@ -7,3 +7,5 @@ MOM_parameter_doc.short
 ocean.stats
 time_stamp.out
 *.nc
+*.nc.*
+exitcode
