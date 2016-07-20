@@ -1,8 +1,8 @@
 "Neverland Experiment"
 1 1 1 0 0 0
-"snapshots",      1,"days",1,"days","time",
-"daily_averages", 1,"days",1,"days","time",
-"forcing",        1,"days",1,"days","time",
+"snapshots",      5,"days",1,"days","time",
+"daily_averages", 5,"days",1,"days","time",
+"forcing",        5,"days",1,"days","time",
 
 #This is the field section of the diag_table.
 
