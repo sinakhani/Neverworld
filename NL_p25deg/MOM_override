@@ -1,0 +1,7 @@
+! Blank file in which we can put "overrides" for parameters
+!VERBOSITY=9
+#override NIGLOBAL = 360
+#override NJGLOBAL = 288
+#override DT = 1800.
+#override KHTH = 0.
+#override DAYMAX = 365.
