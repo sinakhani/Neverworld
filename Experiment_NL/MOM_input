@@ -68,7 +68,7 @@ THICKNESSDIFFUSE = True         !   [Boolean] default = False
 THICKNESSDIFFUSE_FIRST = True   !   [Boolean] default = False
                                 ! If true, do thickness diffusion before dynamics.
                                 ! This is only used if THICKNESSDIFFUSE is true.
-MIXEDLAYER_RESTRAT = True       !   [Boolean] default = False
+MIXEDLAYER_RESTRAT = False      !   [Boolean] default = False
                                 ! If true, a density-gradient dependent re-stratifying
                                 ! flow is imposed in the mixed layer.
                                 ! This is only used if BULKMIXEDLAYER is true.
@@ -106,7 +106,7 @@ SAVE_INITIAL_CONDS = True       !   [Boolean] default = False
 ! === module MOM_tracer_registry ===
 
 ! === module MOM_tracer_flow_control ===
-USE_IDEAL_AGE_TRACER = True     !   [Boolean] default = False
+USE_IDEAL_AGE_TRACER = False    !   [Boolean] default = False
                                 ! If true, use the ideal_age_example tracer package.
 
 ! === module ideal_age_example ===
@@ -302,6 +302,10 @@ PRANDTL_TURB = 0.0              !   [nondim] default = 1.0
 DYNAMIC_VISCOUS_ML = True       !   [Boolean] default = False
                                 ! If true, use a bulk Richardson number criterion to
                                 ! determine the mixed layer thickness for viscosity.
+HMIX_FIXED = 20.0               !   [m]
+                                ! The prescribed depth over which the near-surface
+                                ! viscosity and diffusivity are elevated when the bulk
+                                ! mixed layer is not used.
 U_TRUNC_FILE = "U_velocity_truncations" ! default = ""
                                 ! The absolute path to a file into which the accelerations
                                 ! leading to zonal velocity truncations are written.
@@ -328,7 +332,7 @@ MAXVEL = 10.0                   !   [m s-1] default = 3.0E+08
 ! === module MOM_PointAccel ===
 
 ! === module MOM_set_visc ===
-USE_JACKSON_PARAM = True        !   [Boolean] default = False
+USE_JACKSON_PARAM = False        !   [Boolean] default = False
                                 ! If true, use the Jackson-Hallberg-Legg (JPO 2008)
                                 ! shear mixing parameterization.
 ML_OMEGA_FRAC = 1.0             !   [nondim] default = 0.0
