@@ -1,2 +1,7 @@
 ! Blank file in which we can put "overrides" for parameters
 !VERBOSITY=9
+#override AH_VEL_SCALE = 0.05
+#override RESTOREBUOY = False
+#override MAXCPU = -1.
+#override CORIOLIS_SCHEME = "SADOURNY75_ENSTRO"
+#override DAYMAX = 73000.
