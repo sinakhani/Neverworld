@@ -4,4 +4,5 @@
 #override NJGLOBAL = 288
 #override DT = 1200.
 #override KHTH = 0.
-#override DAYMAX = 18250.
+#override CORIOLIS_SCHEME = "SADOURNY75_ENSTRO"
+#override DAYMAX = 36500.
