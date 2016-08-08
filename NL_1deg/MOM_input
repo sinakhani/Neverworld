@@ -123,7 +123,7 @@ TOPO_CONFIG = "Neverland"       !
                                 !     USER - call a user modified routine.
 
 ! === module Neverland_initialize_topography ===
-NL_ROUGHNESS_AMP = 0.0          !   [not defined] default = 0.05
+NL_ROUGHNESS_AMP = 0.05         !   [not defined] default = 0.05
                                 ! Amplitude of wavy signal in bathymetry.
 MINIMUM_DEPTH = 1.0             !   [m] default = 0.0
                                 ! If MASKING_DEPTH is unspecified, then anything shallower than
@@ -277,7 +277,7 @@ BOUND_CORIOLIS = True           !   [Boolean] default = False
 ! === module MOM_PressureForce_AFV ===
 
 ! === module MOM_hor_visc ===
-AH_VEL_SCALE = 0.05             !   [m s-1] default = 0.0
+AH_VEL_SCALE = 0.0             !   [m s-1] default = 0.0
                                 ! The velocity scale which is multiplied by the cube of
                                 ! the grid spacing to calculate the biharmonic viscosity.
                                 ! The final viscosity is the largest of this scaled
@@ -383,7 +383,7 @@ ML_KHTR_SCALE = 0.0             !   [nondim] default = 1.0
 ! This module implements neutral diffusion of tracers
 
 ! === module MOM_surface_forcing ===
-BUOY_CONFIG = "linear"          !
+BUOY_CONFIG = "zero"            !
                                 ! The character string that indicates how buoyancy forcing
                                 ! is specified. Valid options include (file), (zero),
                                 ! (linear), (USER), and (NONE).
@@ -391,7 +391,7 @@ WIND_CONFIG = "Neverland"       !
                                 ! The character string that indicates how wind forcing
                                 ! is specified. Valid options include (file), (2gyre),
                                 ! (1gyre), (gyres), (zero), and (USER).
-RESTOREBUOY = True              !   [Boolean] default = False
+RESTOREBUOY = False             !   [Boolean] default = False
                                 ! If true, the buoyancy fluxes drive the model back
                                 ! toward some specified surface state with a rate
                                 ! given by FLUXCONST.
@@ -420,7 +420,7 @@ MAXTRUNC = 5000                 !   [truncations save_interval-1] default = 0
                                 ! to stop if there is any truncation of velocities.
 
 ! === module MOM_write_cputime ===
-MAXCPU = 2.88E+04               !   [wall-clock seconds] default = -1.0
+MAXCPU = -1.0                   !   [wall-clock seconds] default = -1.0
                                 ! The maximum amount of cpu time per processor for which
                                 ! MOM should run before saving a restart file and
                                 ! quitting with a return value that indicates that a
