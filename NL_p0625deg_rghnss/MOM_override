@@ -1,0 +1,13 @@
+! Blank file in which we can put "overrides" for parameters
+!VERBOSITY=9
+#override NIGLOBAL = 1440
+#override NJGLOBAL = 1152
+#override DT = 300.
+#override RESOLN_SCALED_KHTH = False
+#override RESOLN_SCALED_KHTR = False
+#override KHTH_SLOPE_CFF = 0.
+#override KHTR_SLOPE_CFF = 0.
+#override KHTH = 0.
+#override CORIOLIS_SCHEME = "SADOURNY75_ENSTRO"
+#override DAYMAX = 36500.
+
