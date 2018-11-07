@@ -1,1 +1,9 @@
 *~
+*_velocity_truncations
+available_diags.*
+*.nc
+std.out
+*.err
+*.log
+*.out
+RESTART

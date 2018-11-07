@@ -21,9 +21,10 @@
 "ocean_model","PE_to_KE","PE_to_KE","snapshots","all","none","none",2
 "ocean_model","KE_visc","KE_visc","snapshots","all","none","none",2
 "ocean_model","KE_horvisc","KE_horvisc","snapshots","all","none","none",2
+"ocean_model","PFu","PFu","snapshots","all","none","none",2
+"ocean_model","PFv","PFv","snapshots","all","none","none",2
+"ocean_model","KHTH_u1","KHTH_u1","snapshots","all","none","none",2
 "ocean_model","KHTH_v1","KHTH_v1","snapshots","all","none","none",2
-"ocean_model","MEKE","MEKE","snapshots","all","none","none",2
-
 
 "ocean_model","u","u","daily_averages","all","mean","none",2
 "ocean_model","v","v","daily_averages","all","mean","none",2
@@ -37,11 +38,10 @@
 "ocean_model","PE_to_KE","PE_to_KE","daily_averages","all","mean","none",2
 "ocean_model","KE_visc","KE_visc","daily_averages","all","mean","none",2
 "ocean_model","KE_horvisc","KE_horvisc","daily_averages","all","mean","none",2
+"ocean_model","PFu","PFu","daily_averages","all","mean","none",2
+"ocean_model","PFv","PFv","daily_averages","all","mean","none",2
+"ocean_model","KHTH_u1","KHTH_u1","daily_averages","all","mean","none",2
 "ocean_model","KHTH_v1","KHTH_v1","daily_averages","all","mean","none",2
-"ocean_model","MEKE","MEKE","daily_averages","all","mean","none",2
-"ocean_model","MEKE_Le","MEKE_Le","daily_averages","all","mean","none",2
-"ocean_model","MEKE_Lrhines","MEKE_Lrhines","daily_averages","all","mean","none",2
-"ocean_model","MEKE_Leady","MEKE_Leady","daily_averages","all","mean","none",2
 
 "ocean_model","taux","taux","forcing","all","none","none",2
 "ocean_model","tauy","tauy","forcing","all","none","none",2

@@ -123,7 +123,7 @@ TOPO_CONFIG = "Neverland"       !
                                 !     USER - call a user modified routine.
 
 ! === module Neverland_initialize_topography ===
-NL_ROUGHNESS_AMP = 0.00         !   [not defined] default = 0.05
+NL_ROUGHNESS_AMP = 0.05         !   [not defined] default = 0.05
                                 ! Amplitude of wavy signal in bathymetry.
 MINIMUM_DEPTH = 1.0             !   [m] default = 0.0
                                 ! If MASKING_DEPTH is unspecified, then anything shallower than
@@ -211,7 +211,7 @@ KHTH_SLOPE_CFF = 0.1            !   [nondim] default = 0.0
 KHTR_SLOPE_CFF = 0.1            !   [nondim] default = 0.0
                                 ! The nondimensional coefficient in the Visbeck formula
                                 ! for the epipycnal tracer diffusivity
-VARMIX_KTOP = 6                 !   [nondim] default = 2
+VARMIX_KTOP = 2                 !   [nondim] default = 6     !!! was 6 SK
                                 ! The layer number at which to start vertical integration
                                 ! of S*N for purposes of finding the Eady growth rate.
 VISBECK_L_SCALE = 3.0E+04       !   [m] default = 0.0

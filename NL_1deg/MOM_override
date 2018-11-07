@@ -1,7 +1,27 @@
 ! Blank file in which we can put "overrides" for parameters
 !VERBOSITY=9
-#override AH_VEL_SCALE = 0.05
-#override RESTOREBUOY = False
-#override MAXCPU = -1.
+#override NIGLOBAL = 90
+#override NJGLOBAL = 72
+#override DT = 1600.
+#override RESOLN_SCALED_KHTH = False
+#override RESOLN_SCALED_KHTR = False
+#override KHTH_SLOPE_CFF = 0.
+#override KHTR_SLOPE_CFF = 0.
+#override KHTH = 0.
+#override VISBECK_L_SCALE = 0.          !!!! 4.14E+04 for Visbeck model and is calculated based on Neverland 1/16 degree simulation
+#override USE_VARIABLE_MIXING =	True    !!!! Should be true for MEKE model
+#override USE_MEKE = True
+#override MEKE_GMCOEFF = 1.0
+#override MEKE_KHTH_FAC = 1.0
+#override KHTH_MIN = 10.0
+#override MEKE_KHMEKE_FAC = 1.0        !!! To consider dissipation by MEKE
+#override MEKE_ALPHA_RHINES = 0.05
+#override MEKE_ALPHA_EADY = 0.05
 #override CORIOLIS_SCHEME = "SADOURNY75_ENSTRO"
-#override DAYMAX = 73000.
+#override DAYMAX = 36500.
+
+
+
+
+
+
