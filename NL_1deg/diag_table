@@ -1,8 +1,8 @@
 "Neverland Experiment"
 1 1 1 0 0 0
 "snapshots",      10,"days",1,"days","time",
-"averages",      365,"days",1,"days","time",
-"forcing",       50,"years",1,"days","time",
+"daily_averages", 365,"days",1,"days","time",
+"forcing",        3650,"days",1,"days","time",
 
 #This is the field section of the diag_table.
 
@@ -13,11 +13,35 @@
 "ocean_model","v","v","snapshots","all","none","none",2
 "ocean_model","h","h","snapshots","all","none","none",2
 "ocean_model","e","e","snapshots","all","none","none",1
+"ocean_model","vh","vh","snapshots","all","none","none",2
+"ocean_model","vh_rho","vh_rho","snapshots","all","none","none",2
+"ocean_model","uh","uh","snapshots","all","none","none",2
+"ocean_model","uh_rho","uh_rho","snapshots","all","none","none",2
+"ocean_model","KE","KE","snapshots","all","none","none",2
+"ocean_model","PE_to_KE","PE_to_KE","snapshots","all","none","none",2
+"ocean_model","KE_visc","KE_visc","snapshots","all","none","none",2
+"ocean_model","KE_horvisc","KE_horvisc","snapshots","all","none","none",2
+"ocean_model","KHTH_v1","KHTH_v1","snapshots","all","none","none",2
+"ocean_model","MEKE","MEKE","snapshots","all","none","none",2
 
-"ocean_model","u","u","averages","all","mean","none",2
-"ocean_model","v","v","averages","all","mean","none",2
-"ocean_model","h","h","averages","all","mean","none",2
-"ocean_model","e","e","averages","all","mean","none",1
+
+"ocean_model","u","u","daily_averages","all","mean","none",2
+"ocean_model","v","v","daily_averages","all","mean","none",2
+"ocean_model","h","h","daily_averages","all","mean","none",2
+"ocean_model","e","e","daily_averages","all","mean","none",1
+"ocean_model","vh","vh","daily_averages","all","mean","none",2
+"ocean_model","vh_rho","vh_rho","daily_averages","all","mean","none",2
+"ocean_model","uh","uh","daily_averages","all","mean","none",2
+"ocean_model","uh_rho","uh_rho","daily_averages","all","mean","none",2
+"ocean_model","KE","KE","daily_averages","all","mean","none",2
+"ocean_model","PE_to_KE","PE_to_KE","daily_averages","all","mean","none",2
+"ocean_model","KE_visc","KE_visc","daily_averages","all","mean","none",2
+"ocean_model","KE_horvisc","KE_horvisc","daily_averages","all","mean","none",2
+"ocean_model","KHTH_v1","KHTH_v1","daily_averages","all","mean","none",2
+"ocean_model","MEKE","MEKE","daily_averages","all","mean","none",2
+"ocean_model","MEKE_Le","MEKE_Le","daily_averages","all","mean","none",2
+"ocean_model","MEKE_Lrhines","MEKE_Lrhines","daily_averages","all","mean","none",2
+"ocean_model","MEKE_Leady","MEKE_Leady","daily_averages","all","mean","none",2
 
 "ocean_model","taux","taux","forcing","all","none","none",2
 "ocean_model","tauy","tauy","forcing","all","none","none",2
