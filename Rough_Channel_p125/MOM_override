@@ -1,0 +1,50 @@
+! Blank file in which we can put "overrides" for parameters
+!VERBOSITY=9
+#override NIGLOBAL = 720
+#override NJGLOBAL = 576
+#override DT = 200.
+#override RESOLN_SCALED_KHTH = False         !!! Should be on when FGNV_STREAMFUNCTION is on !!! why?!
+#override KH_RES_FN_POWER = 0               !!! Resolution function power (set to 0 for having no resolution function!) in 1 deg put this to 100, works? 
+#override KH_RES_SCALE_COEF = 0             !!! Resolution function scale (set to 0 for having no resolution function!) works?
+#override RESOLN_SCALED_KHTR = False
+#override KHTH_SLOPE_CFF = 0.0             !!! Alpha_s for Visbeck model - default 0.1
+#override KHTR_SLOPE_CFF = 0.0
+#override KHTH = 0.0                       !!! For constant GM model  
+#override VISBECK_L_SCALE = 0.0        !!! 3.0(1.0)E+05 for VARMIX_KTOP=6(=2) for Visbeck model and is calculated based on Neverland 1/16 degree simulation
+#override USE_VARIABLE_MIXING = False      !!! Should be true for MEKE model
+#override USE_MEKE = False              !!! Turns on meke model
+#override MEKE_GMCOEFF = 0.0            !!! Should be 1.0 for GM meke and zero otherwise
+#override MEKE_KHTH_FAC = 0.0           !!! Should be 1.0 for GM meke and zero otherwise 
+#override KHTH_MIN = 0.0                !!! Rings the bell for getting non-zero KHTH and MEKE (should have a non-zero initial KHTH - default 1.0)
+#override KHTH_MAX = 0.0             !!!    Set to 2500.0 in meke and Visbeck GM model
+#override MEKE_KHMEKE_FAC = 0.0        !!! To consider diffusion (or dissipation) by MEKE -  set to 1.0
+#override MEKE_ALPHA_RHINES = 0.0      !!! default 0.15 (0.18) using for GM meke with VARMIX_KTOP=6(=2)  
+#override MEKE_ALPHA_EADY = 0.0        !!! default 0.15 (0.18) using for GM meke with VARMIX_KTOP=6(=2)  
+#override MEKE_KHCOEFF = 0.0           !!! Should be 1.0 when using GM based meke. In the case of doing backscatter or Visbeck, turn this to 0.0.
+#override KHTH_USE_EBT_STRUCT=False             !!! When True uses vertical structure in GM MEKE       
+#override KHTH_USE_FGNV_STREAMFUNCTION = False  !!!! Reduce vertical smootihng lengthscale (mainly use in MEKE and Visbeck to reduce high diffusivity on boundaries)
+#override LAPLACIAN = False            !!! Turn on backscatter by meke. Set to False otherwise
+#override MEKE_VISCOSITY_COEFF = 0.0   !!! Set the amount of backscatter by MEKE (e.g. -0.2 for 1 deg res. or -0.1 for 0.5 or 0.25 deg res.) . Set to zero otherwise
+#override MEKE_FRCOEFF = -1.0         !!! conversion from momentum into meke - should be 1.0 for backscatter and -1.0 for GM based meke or otherwise
+#override MEKE_KH = -1.0               !!! meke diffusion - constant. Set it to 1000.0 for backscatter and -1.0 when MEKE_GMCOEFF is on or oterwise. 
+                                         !!We can set MEKE_KH  to a large value to have meke diffusion for smoothing (e.g. =5000.0)
+#override MEKE_ALPHA_GRID = 0.0         !!! If 1.0, it set the backscatter mixing length to be the grid spacing. For GM or otherwise set it to 0.0.
+#override CORIOLIS_SCHEME = "SADOURNY75_ENSTRO"
+#override DAYMAX = 14600.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
